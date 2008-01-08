@@ -1,0 +1,12 @@
+ORIG_PN="perl4caml"
+inherit ocaml
+
+DESCRIPTION="OCaml Perl language bindings"
+HOMEPAGE="http://merjis.com/developers/perl4caml"
+SRC_URI="http://merjis.com/_file/${ORIG_PN}-${PV}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1
+}
